@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './Github.css';
+import GithubUser from './GithubUser';
 
 class Github extends Component {
   state = {
