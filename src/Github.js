@@ -1,10 +1,40 @@
 import React, { Component } from 'react';
 
+import './Github.css';
+
 class Github extends Component {
+  state = {
+    username: '',
+  };
+
+  handleChange = (ev) => {
+    this.setState({ username: ev.target.value });
+  }
+
   render() {
     return (
       <div className="Github">
-        testing
+        <img
+          src="http://www.aha.io/assets/github.7433692cabbfa132f34adb034e7909fa.png"
+          alt="GitHub"
+          className="logo"
+        />
+
+        <form>
+          <div>
+            <input
+              type="text"
+              placeholder="Enter a GitHub user"
+              value={this.state.username}
+              onChange={this.handleChange}
+            />
+            <div>
+              <button type="submit">
+                Look up GitHub user
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     );
   }
