@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route, Switch, NavLink } from 'react-router-dom';
 
 import './Github.css';
 import GithubUser from './GithubUser';
@@ -42,6 +43,8 @@ class Github extends Component {
             </div>
           </div>
         </form>
+
+        <Route path="/github/:username" component={GithubUser} />
       </div>
     );
   }
